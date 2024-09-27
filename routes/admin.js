@@ -38,7 +38,6 @@ router.post("/courses", adminMiddleware, async (req, res) => {
 });
 
 router.get("/courses", adminMiddleware, async(req, res) => {
-  // Implement fetching all courses logic
   try{
     const allCourses = await Course.find({});
     res.json({
